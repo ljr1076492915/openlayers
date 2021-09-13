@@ -4,7 +4,7 @@
 本项目为练习案例，在vue-openlayers的基础上增加了：`` wfs新增地块、truf几何切割、面积计算、openlayers遮罩层等``。
 原项目地址``(https://gitee.com/rabbitsvip/vue-openlayers.git)``。
 
-![微信订阅号：Rabbit_svip](https://images.gitee.com/uploads/images/2020/0606/204201_c329f5ac_4809606.png)
+![微信订阅号：Rabbit_svip](https://raw.githubusercontent.com/ljr1076492915/openlayers/e1aac26ec78e77cf7bd9ad059835a4a2fd16ffff/public/20210913100317.png)
 
 
 <br>
