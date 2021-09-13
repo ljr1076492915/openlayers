@@ -34,7 +34,7 @@ export default {
                         attribution: false // 关闭归属控件
                     })
                     .extend([]),
-                layers: [baseLayer], // , this.mapServerLayer
+                layers: [baseLayer],
                 view: new ol.View({
                     projection: 'EPSG:4326',
                     center: [122.1959, 37.2117],
