@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import 'ol/ol.css';
 import ol from '../../api/ol.js';
 import * as turf from '@turf/turf';
 import proj4 from 'proj4';
