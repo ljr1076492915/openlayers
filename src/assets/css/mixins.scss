@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 头部标题样式 */
+@mixin headTitle($t: center, $mb: 30px) {
+  text-align: $t;
+  margin-bottom: $mb;
+}
+
+/* 地图默认尺寸样式 */
+@mixin mapStyle($w: 800px, $h: 800px) {
+  width: $w;
+  height: $h;
+  border: 1px solid #eee;
+  margin: 0 auto;
+}
