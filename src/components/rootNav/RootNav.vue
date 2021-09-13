@@ -184,6 +184,10 @@ export default {
                 {
                     title: '动态路线',
                     to: '/animationLine'
+                },
+                {
+                    title: '标绘',
+                    to: '/Plotting'
                 }
             ]
         };

@@ -1,46 +1,44 @@
 <template>
-  <div id="app">
-    <root-nav></root-nav>
-    <div class="root-view">
-      <router-view/>
+    <div id="app">
+        <root-nav></root-nav>
+        <div class="root-view"><router-view /></div>
     </div>
-  </div>
 </template>
 
 <script>
-import RootNav from './components/rootNav/RootNav'
+import RootNav from './components/rootNav/RootNav';
 // import 'todomvc-common/base.css'
 // import 'todomvc-app-css/index.css'
 export default {
-  name: 'App',
-  components: {
-    RootNav
-  }
-}
+    name: 'App',
+    components: {
+        RootNav
+    }
+};
 </script>
 
 <style lang="scss">
-  @import '@/assets/css/mixins.scss';
+@import '@/assets/css/mixins.scss';
 
-  #app {
+#app {
     display: flex;
-  }
+}
 
-  .root-view {
+.root-view {
     flex: 1;
     height: 100vh;
     overflow: hidden;
-  }
+}
 
-  // pub
-  .h-title {
+// pub
+.h-title {
     @include headTitle();
-  }
-  .map-x {
+}
+.map-x {
     @include mapStyle();
-  }
-  .vm {
+}
+.vm {
     height: 100%;
     overflow: auto;
-  }
+}
 </style>

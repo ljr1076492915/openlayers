@@ -218,6 +218,11 @@ const routes = [{
         path: '/animationLine',
         name: 'animationLine',
         component: () => import('../views/animationLine/animationLine')
+    },
+    {
+        path: '/Plotting',
+        name: 'Plotting',
+        component: () => import('../views/Plotting/Plotting')
     }
 ]
 
