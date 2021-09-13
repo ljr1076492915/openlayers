@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             mainMap: '',
-            points: [[122.2986, 37.3674], [122.2970, 37.2329], [122.1192, 37.0836]],
+            points: [[122.2986, 37.3674], [122.297, 37.2329], [122.1192, 37.0836]],
             featureLine: '',
             interval: '',
             lineLayer: ''
@@ -47,22 +47,7 @@ export default {
                 geometry: new ol.geom.LineString(this.points),
                 dashOffset: 0
             });
-            let outlineStroke = new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: [25, 25, 255, 1],
-                    width: 5
-                })
-            });
-
-            let getAnimationStrokeStyle = new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: [204, 204, 255, 1],
-                    width: 3,
-                    lineDash: [2, 7],
-                    lineDashOffset: this.featureLine.get('dashOffset')
-                })
-            });
-            this.featureLine.setStyle([outlineStroke, getAnimationStrokeStyle]);
+            this.addFeatureStyle();
             this.lineLayer = new ol.layer.Vector({
                 source: new ol.source.Vector({
                     wrapX: false,
@@ -76,25 +61,25 @@ export default {
                 let offset = this.featureLine.get('dashOffset');
                 offset = offset == 8 ? 0 : offset + 1;
                 this.featureLine.set('dashOffset', offset);
-                let outlineStroke = new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: [25, 25, 255, 1],
-                        width: 5
-                    })
-                });
-                let getAnimationStrokeStyle = new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: [204, 204, 255, 1],
-                        width: 3,
-                        lineDash: [2, 7],
-                        lineDashOffset: offset
-                    })
-                });
-                this.featureLine.setStyle([outlineStroke, getAnimationStrokeStyle]);
+                this.addFeatureStyle();
             }, 100);
         },
         addFeatureStyle() {
-            
+            let outlineStroke = new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: [25, 25, 255, 1],
+                    width: 5
+                })
+            });
+            let getAnimationStrokeStyle = new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: [204, 204, 255, 1],
+                    width: 3,
+                    lineDash: [2, 7],
+                    lineDashOffset: this.featureLine.get('dashOffset')
+                })
+            });
+            this.featureLine.setStyle([outlineStroke, getAnimationStrokeStyle]);
         }
     },
     beforeDestroy() {
