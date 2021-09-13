@@ -67,13 +67,13 @@ export default {
         addFeatureStyle() {
             let outlineStroke = new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: [25, 25, 255, 1],
+                    color: [25, 25, 255, 1],// 蓝色
                     width: 5
                 })
             });
             let getAnimationStrokeStyle = new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: [204, 204, 255, 1],
+                    color: [204, 204, 255, 1],// 白块
                     width: 3,
                     lineDash: [2, 7],
                     lineDashOffset: this.featureLine.get('dashOffset')
